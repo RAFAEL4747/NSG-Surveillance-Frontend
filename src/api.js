@@ -1,9 +1,8 @@
 // api.js — centralised API client
 // All calls hit the FastAPI backend at localhost:8000
 
-const BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1'
-const WS_BASE = import.meta.env.VITE_WS_URL || 'ws://localhost:8000/ws'
-
+const BASE = import.meta.env.VITE_API_URL || 'https://nsg-surveillance-backend.onrender.com/api/v1'
+const WS_BASE = import.meta.env.VITE_WS_URL || 'wss://nsg-surveillance-backend.onrender.com/ws'
 // Upload MP4 + MP3 and start analysis job
 export async function startAnalysis(videoFile, audioFile) {
   const form = new FormData()
